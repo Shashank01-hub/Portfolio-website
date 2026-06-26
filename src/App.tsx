@@ -30,12 +30,20 @@ const projects = [
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Docker'],
     description:
       'Built a finance dashboard for transaction monitoring and analytics with authentication and deployment using Docker, Vercel, and Render.',
+    repo: {
+      url: 'https://github.com/Shashank01-hub/Expense-Tracker-Application',
+      label: 'Expense Tracker (GitHub)'
+    }
   },
   {
     name: 'Task Manager Backend',
     tech: ['Node.js', 'Express.js', 'MongoDB'],
     description:
       'Developed secure REST APIs with JWT authentication, role-based authorization, email OTP verification, and CRUD functionality.',
+    repo: {
+      url: 'https://github.com/Shashank01-hub/Task-Manager-Application',
+      label: 'Task Manager (GitHub)'
+    }
   },
 ]
 
@@ -179,6 +187,13 @@ function App() {
                   </span>
                 ))}
               </div>
+              {project.repo && (
+                <div className="project-links">
+                  <a href={project.repo.url} target="_blank" rel="noreferrer">
+                    {project.repo.label}
+                  </a>
+                </div>
+              )}
             </article>
           ))}
         </div>
